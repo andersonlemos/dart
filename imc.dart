@@ -2,16 +2,24 @@ import 'dart:io';
 
 main() {
 
-  print("----------Digite seu peso-------------");
+  print("---------Digite seu peso------------");
   var peso = int.parse(stdin.readLineSync());
 
-  print("---------Digite sua altura------------");
+  print("--------Digite sua altura-----------");
   var altura = double.parse(stdin.readLineSync());
 
-  var imc = peso / (altura * altura);
+  double imc = CalculaImc(peso, altura);
+  ImprimeResultado(imc);
+}
 
-
+double CalculaImc(int peso, double altura){
+    return peso / (altura * altura);
+}
+ImprimeResultado(imc){
+  
+  print("====================================");
   print("Seu IMC é igual a " + imc.toString());
+  print("====================================");
 
   if(imc<=18.5){
     print("Você está abaixo do peso");
