@@ -1,9 +1,8 @@
-
-import 'src/pessoa.dart';
+import 'package:hello_world/src/gato.dart';
 
 main(List<String> arguments) {
-  Pessoa pessoa = Pessoa(nome: 'huguinho', idade: 16, sexo: 'Masculino');
-  print(pessoa.nome);
-  print(pessoa.idade);
-  print(pessoa.sexo);
+
+  Gato gato = Gato(nome: 'Bolinha', barulho: 'Miau');
+
+  print(gato.imprimir());
 }
